@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Profesionální zemní a výkopové práce minibagrem. Spolehlivost, moderní technika a férové ceny.">
+    <meta name="theme-color" content="#0f0f0f">
+    <title>MINIBAGRYADRI - Zemní a výkopové práce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">MINIBAGRY<span class="text-primary">ADRI</span></div>
+            <nav class="nav">
+                <a href="#about" class="nav-link">O nás</a>
+                <a href="#pricing" class="nav-link">Ceník</a>
+                <a href="#contact" class="nav-link">Kontakt</a>
+            </nav>
+            <a href="tel:720317478" class="btn btn-primary glass-effect">Zavolat</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-bg"></div>
+
+            <div class="container hero-content fade-in-up">
+                <h1>Zemní a výkopové <br><span class="text-primary">práce od A do Z</span></h1>
+                <p>Profesionální přístup, moderní technika a spolehlivost pro váš projekt.</p>
+                <div class="hero-buttons">
+                    <a href="tel:720317478" class="btn btn-primary btn-lg glow-effect">720 317 478</a>
+                    <a href="#contact" class="btn btn-secondary btn-lg glass-effect">Napište nám</a>
+                </div>
+            </div>
+
+            <!-- Full Excavator Animation -->
+            <div class="excavator-wrapper fade-in-up delay-200">
+                <div class="excavator-hero-container">
+                    <svg class="excavator-full-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FFAA00;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Tracks -->
+                        <g class="tracks-group">
+                            <path d="M50,170 L130,170 L140,150 L40,150 Z" fill="none" stroke="#555" stroke-width="2" />
+                            <circle cx="50" cy="160" r="8" fill="none" stroke="#FFD700" stroke-width="2"
+                                class="track-wheel" />
+                            <circle cx="130" cy="160" r="8" fill="none" stroke="#FFD700" stroke-width="2"
+                                class="track-wheel" />
+                            <path d="M40,150 Q30,160 40,170 L140,170 Q150,160 140,150 Z" fill="none" stroke="#FFD700"
+                                stroke-width="2" stroke-dasharray="5,3" class="track-treads" />
+                        </g>
+
+                        <!-- Body rotates -->
+                        <g class="excavator-chassis">
+                            <!-- Cab/Body -->
+                            <path d="M60,110 L120,110 L130,150 L50,150 Z" fill="rgba(255, 215, 0, 0.1)"
+                                stroke="url(#gold-gradient)" stroke-width="3" />
+                            <path d="M70,110 L70,80 L110,80 L120,110" fill="none" stroke="#FFD700" stroke-width="2" />
+                            <!-- Cab Frame -->
+
+                            <!-- Arm System -->
+                            <g class="boom-group">
+                                <path d="M110,120 L180,80" stroke="#FFD700" stroke-width="8" stroke-linecap="round" />
+                                <circle cx="110" cy="120" r="4" fill="#111" />
+
+                                <g class="stick-group">
+                                    <path d="M180,80 L240,130" stroke="#FFD700" stroke-width="6"
+                                        stroke-linecap="round" />
+                                    <circle cx="180" cy="80" r="3" fill="#111" />
+
+                                    <g class="bucket-group-full">
+                                        <path d="M240,130 Q260,160 220,160 L230,130 Z" fill="rgba(255, 215, 0, 0.3)"
+                                            stroke="#FFD700" stroke-width="2" />
+                                        <circle cx="240" cy="130" r="3" fill="#111" />
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">O nás a naše služby</h2>
+                <div class="about-grid fade-in-up delay-100">
+                    <div class="about-text">
+                        <p class="lead-text">
+                            [Zde bude text o nás, který dodáte později. Například: Jsme firma zaměřující se na kvalitní
+                            zemní a výkopové práce s důrazem na spokojenost zákazníka.]
+                        </p>
+                        <h3>Nabízené služby</h3>
+                        <ul class="services-list">
+                            <li class="glass-card">Výkopové práce pro inženýrské sítě</li>
+                            <li class="glass-card">Terénní úpravy zahrad</li>
+                            <li class="glass-card">Základy pro rodinné domy</li>
+                            <li class="glass-card">Výkopy bazénů a jímek</li>
+                            <li class="glass-card">Odvoz zeminy</li>
+                            <li class="glass-card">[Další služby]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="section bg-gradient">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Ceník</h2>
+                <div class="pricing-card glass-panel fade-in-up delay-100">
+                    <p class="pricing-main-text">Cena je individuální <br><span class="text-primary">dle rozsahu
+                            práce</span></p>
+                    <p class="pricing-sub-text">Pro konkrétní cenovou nabídku nás neváhejte kontaktovat. Rádi s Vámi
+                        probereme detaily Vašeho projektu.</p>
+                    <a href="tel:720317478" class="btn btn-primary btn-lg glow-effect">Poptat cenu</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Ukázka práce</h2>
+                <div class="gallery-grid fade-in-up delay-100">
+                    <!-- Placeholders for images - User will replace source -->
+                    <div class="gallery-item glass-card">
+                        <div class="gallery-placeholder">FOTO 1</div>
+                    </div>
+                    <div class="gallery-item glass-card">
+                        <div class="gallery-placeholder">FOTO 2</div>
+                    </div>
+                    <div class="gallery-item glass-card">
+                        <div class="gallery-placeholder">FOTO 3</div>
+                    </div>
+                    <div class="gallery-item glass-card">
+                        <div class="gallery-placeholder">FOTO 4</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Kontakt</h2>
+                <div class="contact-methods">
+                    <div class="contact-item glass-card fade-in-up delay-100">
+                        <h3>Telefon</h3>
+                        <a href="tel:720317478" class="contact-link">720 317 478</a>
+                    </div>
+                    <div class="contact-item glass-card fade-in-up delay-200">
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/420720317478" target="_blank" class="contact-link">Napsat na WhatsApp</a>
+                    </div>
+                    <div class="contact-item glass-card fade-in-up delay-300">
+                        <h3>Adresa</h3>
+                        <p>[Adresa bude doplněna]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MINIBAGRY<span class="text-primary">ADRI</span>. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
