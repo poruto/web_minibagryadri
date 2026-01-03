@@ -464,9 +464,20 @@ a {
 
 /* Mobile */
 @media (max-width: 768px) {
+    .header-content {
+        gap: 0.5rem;
+    }
+
     .logo {
-        font-size: 1.4rem;
-        /* Prevent wrapping on small screens */
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .header .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+        white-space: nowrap;
     }
 
     .hero h1 {
@@ -479,6 +490,22 @@ a {
 
     .section-title {
         font-size: 2rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
+    .header-content {
+        gap: 0.25rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .header .btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.7rem;
     }
 }
 
