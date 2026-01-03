@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FFAA00"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#0f0f0f"/>
+  <!-- Tracks -->
+  <path d="M12,52 L32,52 Q38,52 38,46 L38,44 Q38,38 32,38 L12,38 Q6,38 6,44 L6,46 Q6,52 12,52 Z" fill="none" stroke="#FFD700" stroke-width="2"/>
+  <circle cx="14" cy="45" r="4" fill="#222" stroke="#FFD700" stroke-width="1.5"/>
+  <circle cx="30" cy="45" r="4" fill="#222" stroke="#FFD700" stroke-width="1.5"/>
+  <!-- Body/Cab -->
+  <rect x="14" y="26" width="20" height="14" rx="2" fill="url(#gold)" opacity="0.3" stroke="#FFD700" stroke-width="2"/>
+  <rect x="18" y="28" width="12" height="8" rx="1" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+  <!-- Boom -->
+  <line x1="32" y1="30" x2="48" y2="18" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
+  <!-- Stick -->
+  <line x1="48" y1="18" x2="58" y2="30" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+  <!-- Bucket -->
+  <path d="M58,30 Q62,38 54,38 L56,30 Z" fill="url(#gold)" opacity="0.5" stroke="#FFD700" stroke-width="1.5"/>
+  <!-- Joints -->
+  <circle cx="32" cy="30" r="2" fill="#0f0f0f"/>
+  <circle cx="48" cy="18" r="2" fill="#0f0f0f"/>
+  <circle cx="58" cy="30" r="2" fill="#0f0f0f"/>
+</svg>
