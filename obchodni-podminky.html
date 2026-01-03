@@ -47,6 +47,23 @@
         .legal-content li {
             margin-bottom: 5px;
         }
+
+        /* Mobile fix for header */
+        @media (max-width: 480px) {
+            .header-content {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .header-content .logo {
+                font-size: 1.2rem;
+            }
+
+            .header-content .btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+        }
     </style>
 </head>
 
