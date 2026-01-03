@@ -315,9 +315,42 @@ a {
 }
 
 /* Services */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+    .about-grid {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+.about-image {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
 .about-text {
-    max-width: 800px;
-    margin: 0 auto;
+    /* removed max-width limitation for grid layout */
+    margin: 0;
 }
 
 .lead-text {
@@ -469,21 +502,39 @@ a {
 }
 
 .gallery-placeholder {
+    display: none;
+    /* Hide placeholder if still there */
+}
+
+.gallery-item img {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.03);
-    color: var(--color-text-muted);
-    font-weight: 700;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.gallery-item:hover .gallery-placeholder {
-    transform: scale(1.05);
-    background: rgba(255, 215, 0, 0.1);
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(4px);
     color: var(--color-primary);
+    text-align: center;
+    font-weight: 600;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
 }
 
 /* Full Excavator Hero Animation */
