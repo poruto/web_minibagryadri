@@ -1,0 +1,18 @@
+# Robots.txt pro MINIBAGRYADRI
+# https://minibagryadri.cz
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://minibagryadri.cz/sitemap.xml
+
+# Povolit všechny hlavní vyhledávače
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Seznambot
+Allow: /
