@@ -83,6 +83,55 @@
     });
 
     /* =============================================
+       Section rail — track active section
+       ============================================= */
+    const railLinks = Array.from(document.querySelectorAll('.rail-link'));
+    if ('IntersectionObserver' in window && railLinks.length) {
+        const linkBySection = new Map();
+        railLinks.forEach((a) => {
+            const id = (a.getAttribute('href') || '').slice(1);
+            if (id) linkBySection.set(id, a);
+        });
+
+        const sectionEls = Array.from(linkBySection.keys())
+            .map((id) => document.getElementById(id))
+            .filter(Boolean);
+
+        const visible = new Map();
+        const setActive = () => {
+            let best = null;
+            let bestRatio = 0;
+            visible.forEach((ratio, id) => {
+                if (ratio > bestRatio) {
+                    bestRatio = ratio;
+                    best = id;
+                }
+            });
+            railLinks.forEach((a) => a.classList.remove('active'));
+            if (best && linkBySection.has(best)) {
+                linkBySection.get(best).classList.add('active');
+            }
+        };
+
+        const railObserver = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                const id = entry.target.id;
+                if (entry.isIntersecting) {
+                    visible.set(id, entry.intersectionRatio);
+                } else {
+                    visible.delete(id);
+                }
+            }
+            setActive();
+        }, {
+            threshold: [0, 0.15, 0.35, 0.55, 0.75, 1],
+            rootMargin: '-15% 0px -35% 0px'
+        });
+
+        sectionEls.forEach((s) => railObserver.observe(s));
+    }
+
+    /* =============================================
        IntersectionObserver — reveal-on-scroll
        ============================================= */
     const fadeEls = document.querySelectorAll('.fade-in-up');

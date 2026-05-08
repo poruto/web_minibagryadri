@@ -122,7 +122,7 @@
         href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 
 <body>
@@ -155,8 +155,55 @@
 
     <div class="nav-overlay" aria-hidden="true"></div>
 
+    <nav class="rail" aria-label="Indikátor sekcí">
+        <a href="#hero" class="rail-link" data-num="00" aria-label="Úvod"><span class="rail-dot"></span></a>
+        <a href="#about" class="rail-link" data-num="01" aria-label="O nás"><span class="rail-dot"></span></a>
+        <a href="#pricing" class="rail-link" data-num="02" aria-label="Ceník"><span class="rail-dot"></span></a>
+        <a href="#gallery" class="rail-link" data-num="03" aria-label="Galerie"><span class="rail-dot"></span></a>
+        <a href="#contact" class="rail-link" data-num="04" aria-label="Kontakt"><span class="rail-dot"></span></a>
+    </nav>
+
     <main>
         <section id="hero" class="hero">
+            <svg class="hero-schematic" viewBox="0 0 280 160" fill="none" stroke="currentColor"
+                stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+                <line x1="0" y1="148" x2="280" y2="148" stroke-dasharray="3 4" stroke-width="1" opacity="0.55"/>
+                <path d="M28 128 L102 128 a8 8 0 0 1 8 8 v4 a8 8 0 0 1-8 8 L28 148 a8 8 0 0 1-8-8 v-4 a8 8 0 0 1 8-8 z"/>
+                <line x1="32" y1="135" x2="102" y2="135"/>
+                <circle cx="32" cy="142" r="5"/>
+                <circle cx="98" cy="142" r="5"/>
+                <circle cx="50" cy="143" r="3"/>
+                <circle cx="65" cy="143" r="3"/>
+                <circle cx="80" cy="143" r="3"/>
+                <path d="M22 124 L22 110 a6 6 0 0 1 6-6 L40 104 L40 124 Z"/>
+                <path d="M40 124 L40 75 a4 4 0 0 1 4-4 L72 71 a4 4 0 0 1 4 4 L76 124"/>
+                <rect x="46" y="78" width="22" height="20" rx="1"/>
+                <line x1="52" y1="100" x2="52" y2="124"/>
+                <circle cx="80" cy="100" r="2.5" fill="currentColor"/>
+                <path d="M80 100 L82 96 Q92 80 110 65 Q132 50 158 42 L160 46 Q140 56 122 70 Q105 84 88 102 Z"/>
+                <line x1="68" y1="92" x2="125" y2="65"/>
+                <line x1="68" y1="94" x2="125" y2="67"/>
+                <circle cx="68" cy="93" r="2.5" fill="currentColor"/>
+                <circle cx="125" cy="66" r="2.5" fill="currentColor"/>
+                <circle cx="159" cy="44" r="3.5" fill="currentColor"/>
+                <path d="M159 44 L165 41 L210 92 L205 96 Z"/>
+                <line x1="168" y1="55" x2="195" y2="78"/>
+                <line x1="170" y1="53" x2="197" y2="76"/>
+                <circle cx="168" cy="55" r="2" fill="currentColor"/>
+                <circle cx="195" cy="78" r="2" fill="currentColor"/>
+                <circle cx="208" cy="94" r="2" fill="currentColor"/>
+                <path d="M205 96 L218 94 L228 108 L225 122 L215 124 L205 116 Z"/>
+                <line x1="227" y1="121" x2="231" y2="126"/>
+                <line x1="223" y1="123" x2="227" y2="128"/>
+                <line x1="219" y1="124" x2="223" y2="129"/>
+                <g opacity="0.55" stroke-width="1">
+                    <circle cx="252" cy="22" r="10"/>
+                    <line x1="252" y1="8" x2="252" y2="36"/>
+                    <line x1="238" y1="22" x2="266" y2="22"/>
+                    <circle cx="252" cy="22" r="1.5" fill="currentColor"/>
+                </g>
+            </svg>
+
             <div class="container hero-grid">
                 <div class="hero-content">
                     <div class="hero-meta" aria-hidden="true">
@@ -523,7 +570,7 @@
         </div>
     </dialog>
 
-    <script src="script.js?v=6" defer></script>
+    <script src="script.js?v=7" defer></script>
 </body>
 
 </html>
