@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where cwebp *)",
+      "Bash(where magick *)",
+      "Bash(where ffmpeg *)",
+      "Bash(where avifenc *)",
+      "Bash(where node *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(python -c \"from PIL import Image; print\\(Image.__version__\\)\" 2>&1)",
+      "Bash(python *)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri 'http://127.0.0.1:8765/' -UseBasicParsing -TimeoutSec 5; \"HTTP $\\($r.StatusCode\\), $\\($r.RawContentLength\\) bytes\" } catch { \"ERROR: $_\" })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri 'http://127.0.0.1:8765/' -UseBasicParsing -TimeoutSec 5; \"HTTP $\\($r.StatusCode\\), HTML $\\($r.RawContentLength\\) bytes\" } catch { \"ERROR: $_\" })",
+      "PowerShell($loc = Get-Location; Write-Output \"CWD: $loc\"; python --version 2>&1; Get-Item index.html, style.css, script.js | Select-Object Name, Length, LastWriteTime)",
+      "PowerShell(python -m http.server 8765 --bind 127.0.0.1)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://127.0.0.1:8765/\" -UseBasicParsing -TimeoutSec 5; Write-Output \"Status: $\\($r.StatusCode\\)\"; Write-Output \"Length: $\\($r.Content.Length\\)\"; if \\($r.Content -match 'Big\\\\+Shoulders'\\) { Write-Output \"FONT_OK\" } else { Write-Output \"FONT_MISSING\" }; if \\($r.Content -match 'hero-title-italic'\\) { Write-Output \"HERO_OK\" } else { Write-Output \"HERO_MISSING\" }; if \\($r.Content -match 'IČO: 09270884'\\) { Write-Output \"ICO_PRESERVED\" } else { Write-Output \"ICO_MISSING\" }; if \\($r.Content -match '720 773 117'\\) { Write-Output \"PHONE_PRESERVED\" } } catch { Write-Output \"ERR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(try { $css = Invoke-WebRequest -Uri \"http://127.0.0.1:8765/style.css\" -UseBasicParsing -TimeoutSec 5; Write-Output \"CSS Status: $\\($css.StatusCode\\)\"; Write-Output \"CSS Length: $\\($css.Content.Length\\)\"; $js = Invoke-WebRequest -Uri \"http://127.0.0.1:8765/script.js\" -UseBasicParsing -TimeoutSec 5; Write-Output \"JS Status: $\\($js.StatusCode\\)\"; Write-Output \"JS Length: $\\($js.Content.Length\\)\" } catch { Write-Output \"ERR: $\\($_.Exception.Message\\)\" })",
+      "Bash(curl *)"
+    ]
+  }
+}

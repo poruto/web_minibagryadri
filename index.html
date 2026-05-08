@@ -14,7 +14,7 @@
     <meta name="author" content="MINIBAGRYADRI">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
-    <meta name="theme-color" content="#0f0f0f">
+    <meta name="theme-color" content="#0a0b0d">
     <meta name="language" content="Czech">
     <meta name="revisit-after" content="7 days">
 
@@ -76,26 +76,11 @@
             "longitude": 18.1297
         },
         "areaServed": [
-            {
-                "@type": "City",
-                "name": "Klimkovice"
-            },
-            {
-                "@type": "City",
-                "name": "Studénka"
-            },
-            {
-                "@type": "City",
-                "name": "Fulnek"
-            },
-            {
-                "@type": "City",
-                "name": "Ostrava"
-            },
-            {
-                "@type": "City",
-                "name": "Bílovec"
-            }
+            { "@type": "City", "name": "Klimkovice" },
+            { "@type": "City", "name": "Studénka" },
+            { "@type": "City", "name": "Fulnek" },
+            { "@type": "City", "name": "Ostrava" },
+            { "@type": "City", "name": "Bílovec" }
         ],
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
@@ -114,139 +99,123 @@
             "@type": "OfferCatalog",
             "name": "Služby MINIBAGRYADRI",
             "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Zemní a výkopové práce minibagrem"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Realizace vjezdů a příjezdových cest"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Stavba plotů ze ztraceného bednění"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Terénní úpravy pozemků a zahrad"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Výstavba vodoměrných šachet, septiků a jímek"
-                    }
-                }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Zemní a výkopové práce minibagrem" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Realizace vjezdů a příjezdových cest" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stavba plotů ze ztraceného bednění" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Terénní úpravy pozemků a zahrad" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Výstavba vodoměrných šachet, septiků a jímek" } }
             ]
         }
     }
     </script>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- LCP image preload -->
+    <link rel="preload" as="image" type="image/webp" href="images/optimized/gallery_5-800.webp"
+        imagesrcset="images/optimized/gallery_5-800.webp 800w, images/optimized/gallery_5-1600.webp 1600w"
+        imagesizes="(min-width: 980px) 42vw, 100vw">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@700;900&display=swap"
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 
 <body>
 
-    <header class="header">
+    <header class="header" id="site-header">
         <div class="container header-content">
-            <div class="logo">MINIBAGRY<span class="text-primary">ADRI</span></div>
-            <nav class="nav">
-                <a href="#about" class="nav-link">O nás</a>
-                <a href="#pricing" class="nav-link">Ceník</a>
-                <a href="#contact" class="nav-link">Kontakt</a>
+            <a href="#hero" class="logo" aria-label="MINIBAGRYADRI - úvod">MINIBAGRY<span class="text-primary">ADRI</span></a>
+
+            <nav class="nav" id="primary-nav" aria-label="Hlavní">
+                <a href="#about" class="nav-link" data-num="01">O nás</a>
+                <a href="#pricing" class="nav-link" data-num="02">Ceník</a>
+                <a href="#contact" class="nav-link" data-num="03">Kontakt</a>
             </nav>
-            <a href="tel:720773117" class="btn btn-primary glass-effect">Zavolat</a>
+
+            <a href="tel:720773117" class="header-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span class="header-cta-label">Zavolat</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Otevřít menu" aria-expanded="false"
+                aria-controls="primary-nav">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
         </div>
     </header>
 
+    <div class="nav-overlay" aria-hidden="true"></div>
+
     <main>
         <section id="hero" class="hero">
-            <div class="hero-bg"></div>
-
-            <div class="container hero-content fade-in-up">
-                <h1>Zemní a výkopové <br><span class="text-primary">práce od A do Z</span></h1>
-                <p>Profesionální přístup, moderní technika a spolehlivost pro váš projekt.</p>
-                <div class="hero-buttons">
-                    <a href="tel:720773117" class="btn btn-primary btn-lg glow-effect">720 773 117</a>
-                    <a href="#contact" class="btn btn-secondary btn-lg glass-effect">Napište nám</a>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-meta" aria-hidden="true">
+                        <span class="hero-meta-tag"></span>
+                        <span class="hero-meta-rule"></span>
+                        <span class="hero-meta-num">§ 00 / 04</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="hero-title-line">Zemní a výkopové</span>
+                        <span class="hero-title-line hero-title-italic">práce od A do Z</span>
+                    </h1>
+                    <p class="hero-lead">Profesionální přístup, moderní technika a spolehlivost pro váš projekt.</p>
+                    <div class="hero-buttons">
+                        <a href="tel:720773117" class="btn btn-primary">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            720 773 117
+                        </a>
+                        <a href="#contact" class="btn btn-ghost">
+                            Napište nám
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h14M13 6l6 6-6 6"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Full Excavator Animation -->
-            <div class="excavator-wrapper fade-in-up delay-200">
-                <div class="excavator-hero-container">
-                    <svg class="excavator-full-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#FFAA00;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-
-                        <!-- Tracks -->
-                        <g class="tracks-group">
-                            <path d="M50,170 L130,170 L140,150 L40,150 Z" fill="none" stroke="#555" stroke-width="2" />
-                            <circle cx="50" cy="160" r="8" fill="none" stroke="#FFD700" stroke-width="2"
-                                class="track-wheel" />
-                            <circle cx="130" cy="160" r="8" fill="none" stroke="#FFD700" stroke-width="2"
-                                class="track-wheel" />
-                            <path d="M40,150 Q30,160 40,170 L140,170 Q150,160 140,150 Z" fill="none" stroke="#FFD700"
-                                stroke-width="2" stroke-dasharray="5,3" class="track-treads" />
-                        </g>
-
-                        <!-- Body rotates -->
-                        <g class="excavator-chassis">
-                            <!-- Cab/Body -->
-                            <path d="M60,110 L120,110 L130,150 L50,150 Z" fill="rgba(255, 215, 0, 0.1)"
-                                stroke="url(#gold-gradient)" stroke-width="3" />
-                            <path d="M70,110 L70,80 L110,80 L120,110" fill="none" stroke="#FFD700" stroke-width="2" />
-                            <!-- Cab Frame -->
-
-                            <!-- Arm System -->
-                            <g class="boom-group">
-                                <path d="M110,120 L180,80" stroke="#FFD700" stroke-width="8" stroke-linecap="round" />
-                                <circle cx="110" cy="120" r="4" fill="#111" />
-
-                                <g class="stick-group">
-                                    <path d="M180,80 L240,130" stroke="#FFD700" stroke-width="6"
-                                        stroke-linecap="round" />
-                                    <circle cx="180" cy="80" r="3" fill="#111" />
-
-                                    <g class="bucket-group-full">
-                                        <path d="M240,130 Q260,160 220,160 L230,130 Z" fill="rgba(255, 215, 0, 0.3)"
-                                            stroke="#FFD700" stroke-width="2" />
-                                        <circle cx="240" cy="130" r="3" fill="#111" />
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
+                <div class="hero-photo-wrap">
+                    <figure class="hero-photo frame">
+                        <span class="frame-corner-bl" aria-hidden="true"></span>
+                        <span class="frame-corner-br" aria-hidden="true"></span>
+                        <span class="scan" aria-hidden="true"></span>
+                        <picture>
+                            <source type="image/webp"
+                                srcset="images/optimized/gallery_5-800.webp 800w, images/optimized/gallery_5-1600.webp 1600w"
+                                sizes="(min-width: 980px) 42vw, 100vw">
+                            <img src="images/optimized/gallery_5-800.jpg"
+                                srcset="images/optimized/gallery_5-800.jpg 800w, images/optimized/gallery_5-1600.jpg 1600w"
+                                sizes="(min-width: 980px) 42vw, 100vw"
+                                alt="Minibagr v akci" width="1536" height="2048"
+                                fetchpriority="high" decoding="async">
+                        </picture>
+                    </figure>
                 </div>
             </div>
         </section>
 
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title fade-in-up">O mně a naše služby</h2>
-                <div class="about-grid fade-in-up delay-100">
-                    <div class="about-text">
+                <div class="section-head fade-in-up">
+                    <span class="section-num" aria-hidden="true">§ 01 / 04</span>
+                    <h2 class="section-title">O mně a naše služby</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text fade-in-up">
                         <p class="lead-text">
                             Jsem Adri a za každou zakázkou stojím osobně.
                         </p>
@@ -257,106 +226,249 @@
                             S minibagrem, nakladačem UNC a hákovým nosičem do 5 t zvládneme výkop, odvoz i terénní
                             úpravy najednou.
                         </p>
-                        <p class="lead-text" style="margin-top: 1.5rem;">
+                        <p class="lead-text lead-text-bottom">
                             Děláme, co slíbíme. Poctivě a do konce.
                         </p>
+                    </div>
 
-                        <h3>Nabízené služby</h3>
-                        <ul class="services-list">
-                            <li class="glass-card">Zemní a výkopové práce</li>
-                            <li class="glass-card">Výkopy přípojek (voda, kanalizace, elektřina)</li>
-                            <li class="glass-card">Základové pasy a desky</li>
-                            <li class="glass-card">Vjezdy a zpevněné plochy</li>
-                            <li class="glass-card">Pokládka zámkové dlažby</li>
-                            <li class="glass-card">Terénní úpravy pozemků</li>
-                            <li class="glass-card">Ploty a ztracené bednění</li>
-                            <li class="glass-card">Příprava pro bazény, pergoly a stavby</li>
-                            <li class="glass-card">Kompletní realizace od A do Z</li>
-                        </ul>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/adri_portrait.jpg" alt="Adri - Minibagry Adri">
-                    </div>
+                    <figure class="about-image frame fade-in-up delay-100">
+                        <span class="frame-corner-bl" aria-hidden="true"></span>
+                        <span class="frame-corner-br" aria-hidden="true"></span>
+                        <picture>
+                            <source type="image/webp"
+                                srcset="images/optimized/adri_portrait-480.webp 480w, images/optimized/adri_portrait-800.webp 800w, images/optimized/adri_portrait-1200.webp 1200w"
+                                sizes="(min-width: 900px) 36vw, 100vw">
+                            <img src="images/optimized/adri_portrait-800.jpg"
+                                srcset="images/optimized/adri_portrait-480.jpg 480w, images/optimized/adri_portrait-800.jpg 800w, images/optimized/adri_portrait-1200.jpg 1200w"
+                                sizes="(min-width: 900px) 36vw, 100vw"
+                                alt="Adri - Minibagry Adri" width="2316" height="3088"
+                                loading="lazy" decoding="async">
+                        </picture>
+                    </figure>
+                </div>
+
+                <div class="services-block fade-in-up delay-100">
+                    <h3 class="services-title">Nabízené služby</h3>
+                    <ul class="services-list">
+                        <li class="service-item">Zemní a výkopové práce</li>
+                        <li class="service-item">Výkopy přípojek (voda, kanalizace, elektřina)</li>
+                        <li class="service-item">Základové pasy a desky</li>
+                        <li class="service-item">Vjezdy a zpevněné plochy</li>
+                        <li class="service-item">Pokládka zámkové dlažby</li>
+                        <li class="service-item">Terénní úpravy pozemků</li>
+                        <li class="service-item">Ploty a ztracené bednění</li>
+                        <li class="service-item">Příprava pro bazény, pergoly a stavby</li>
+                        <li class="service-item">Kompletní realizace od A do Z</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="pricing" class="section bg-gradient">
+        <section id="pricing" class="section section-pricing">
             <div class="container">
-                <h2 class="section-title fade-in-up">Ceník</h2>
-                <div class="pricing-card glass-panel fade-in-up delay-100">
-                    <p class="pricing-main-text">Cena je individuální <br><span class="text-primary">dle rozsahu
-                            práce</span></p>
+                <div class="pricing-card fade-in-up">
+                    <div class="section-head section-head--center">
+                        <span class="section-num" aria-hidden="true">§ 02 / 04</span>
+                        <h2 class="section-title pricing-title">Ceník</h2>
+                    </div>
+                    <p class="pricing-main-text">Cena je individuální <span class="pricing-italic">dle rozsahu práce</span></p>
+                    <span class="pricing-stripe" aria-hidden="true"></span>
                     <p class="pricing-sub-text">Pro konkrétní cenovou nabídku nás neváhejte kontaktovat. Rádi s Vámi
                         probereme detaily Vašeho projektu.</p>
-                    <a href="tel:720773117" class="btn btn-primary btn-lg glow-effect">Poptat cenu</a>
+                    <a href="tel:720773117" class="btn btn-primary btn-lg">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Poptat cenu
+                    </a>
                 </div>
             </div>
         </section>
 
         <section id="gallery" class="section">
             <div class="container">
-                <h2 class="section-title fade-in-up">Ukázka práce</h2>
-                <div class="gallery-grid fade-in-up delay-100">
-                    <div class="gallery-item glass-card">
-                        <img src="images/gallery_1.jpg" alt="Realizace zemních prací" loading="lazy">
-                        <div class="gallery-caption">Realizace zemních prací</div>
-                    </div>
-                    <div class="gallery-item glass-card">
-                        <img src="images/gallery_2.jpg" alt="Výkopové práce" loading="lazy">
-                        <div class="gallery-caption">Výkopové práce</div>
-                    </div>
-                    <div class="gallery-item glass-card">
-                        <img src="images/gallery_6.jpeg" alt="Terénní úpravy" loading="lazy">
-                        <div class="gallery-caption">Terénní úpravy</div>
-                    </div>
-                    <div class="gallery-item glass-card">
-                        <img src="images/gallery_4.jpg" alt="Realizace výkopu" loading="lazy">
-                        <div class="gallery-caption">Realizace výkopu</div>
-                    </div>
-                    <div class="gallery-item glass-card">
-                        <img src="images/gallery_5.jpg" alt="Minibagr v akci" loading="lazy">
-                        <div class="gallery-caption">Minibagr v akci</div>
-                    </div>
-                    <div class="gallery-item glass-card">
-                        <img src="images/gallery_3.jpg" alt="Detail práce" loading="lazy">
-                        <div class="gallery-caption">Detail práce</div>
-                    </div>
-                    <div class="gallery-item glass-card">
-                        <img src="images/gallery_7.jpeg" alt="Zemní práce" loading="lazy">
-                        <div class="gallery-caption">Zemní práce</div>
-                    </div>
+                <div class="section-head fade-in-up">
+                    <span class="section-num" aria-hidden="true">§ 03 / 04</span>
+                    <h2 class="section-title">Ukázka práce</h2>
+                </div>
+                <div class="gallery-grid">
+                    <button type="button" class="gallery-item fade-in-up" data-full="images/optimized/gallery_1-1600.webp" data-fallback="images/optimized/gallery_1-1600.jpg" data-caption="Realizace zemních prací">
+                        <span class="frame-corner-bl" aria-hidden="true"></span>
+                        <span class="frame-corner-br" aria-hidden="true"></span>
+                        <picture>
+                            <source type="image/webp"
+                                srcset="images/optimized/gallery_1-800.webp 800w, images/optimized/gallery_1-1600.webp 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw">
+                            <img src="images/optimized/gallery_1-800.jpg"
+                                srcset="images/optimized/gallery_1-800.jpg 800w, images/optimized/gallery_1-1600.jpg 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw"
+                                alt="Realizace zemních prací" width="1536" height="2048"
+                                loading="lazy" decoding="async">
+                        </picture>
+                        <span class="gallery-caption">Realizace zemních prací</span>
+                    </button>
+                    <button type="button" class="gallery-item fade-in-up delay-100" data-full="images/optimized/gallery_2-1600.webp" data-fallback="images/optimized/gallery_2-1600.jpg" data-caption="Výkopové práce">
+                        <span class="frame-corner-bl" aria-hidden="true"></span>
+                        <span class="frame-corner-br" aria-hidden="true"></span>
+                        <picture>
+                            <source type="image/webp"
+                                srcset="images/optimized/gallery_2-800.webp 800w, images/optimized/gallery_2-1600.webp 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw">
+                            <img src="images/optimized/gallery_2-800.jpg"
+                                srcset="images/optimized/gallery_2-800.jpg 800w, images/optimized/gallery_2-1600.jpg 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw"
+                                alt="Výkopové práce" width="1200" height="1600"
+                                loading="lazy" decoding="async">
+                        </picture>
+                        <span class="gallery-caption">Výkopové práce</span>
+                    </button>
+                    <button type="button" class="gallery-item fade-in-up delay-200" data-full="images/optimized/gallery_6-1600.webp" data-fallback="images/optimized/gallery_6-1600.jpg" data-caption="Terénní úpravy">
+                        <span class="frame-corner-bl" aria-hidden="true"></span>
+                        <span class="frame-corner-br" aria-hidden="true"></span>
+                        <picture>
+                            <source type="image/webp"
+                                srcset="images/optimized/gallery_6-800.webp 800w, images/optimized/gallery_6-1600.webp 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw">
+                            <img src="images/optimized/gallery_6-800.jpg"
+                                srcset="images/optimized/gallery_6-800.jpg 800w, images/optimized/gallery_6-1600.jpg 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw"
+                                alt="Terénní úpravy" width="1600" height="2133"
+                                loading="lazy" decoding="async">
+                        </picture>
+                        <span class="gallery-caption">Terénní úpravy</span>
+                    </button>
+                    <button type="button" class="gallery-item fade-in-up" data-full="images/optimized/gallery_4-1600.webp" data-fallback="images/optimized/gallery_4-1600.jpg" data-caption="Realizace výkopu">
+                        <span class="frame-corner-bl" aria-hidden="true"></span>
+                        <span class="frame-corner-br" aria-hidden="true"></span>
+                        <picture>
+                            <source type="image/webp"
+                                srcset="images/optimized/gallery_4-800.webp 800w, images/optimized/gallery_4-1600.webp 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw">
+                            <img src="images/optimized/gallery_4-800.jpg"
+                                srcset="images/optimized/gallery_4-800.jpg 800w, images/optimized/gallery_4-1600.jpg 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw"
+                                alt="Realizace výkopu" width="1536" height="2048"
+                                loading="lazy" decoding="async">
+                        </picture>
+                        <span class="gallery-caption">Realizace výkopu</span>
+                    </button>
+                    <button type="button" class="gallery-item fade-in-up delay-100" data-full="images/optimized/gallery_5-1600.webp" data-fallback="images/optimized/gallery_5-1600.jpg" data-caption="Minibagr v akci">
+                        <span class="frame-corner-bl" aria-hidden="true"></span>
+                        <span class="frame-corner-br" aria-hidden="true"></span>
+                        <picture>
+                            <source type="image/webp"
+                                srcset="images/optimized/gallery_5-800.webp 800w, images/optimized/gallery_5-1600.webp 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw">
+                            <img src="images/optimized/gallery_5-800.jpg"
+                                srcset="images/optimized/gallery_5-800.jpg 800w, images/optimized/gallery_5-1600.jpg 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw"
+                                alt="Minibagr v akci" width="1536" height="2048"
+                                loading="lazy" decoding="async">
+                        </picture>
+                        <span class="gallery-caption">Minibagr v akci</span>
+                    </button>
+                    <button type="button" class="gallery-item fade-in-up delay-200" data-full="images/optimized/gallery_3-1600.webp" data-fallback="images/optimized/gallery_3-1600.jpg" data-caption="Detail práce">
+                        <span class="frame-corner-bl" aria-hidden="true"></span>
+                        <span class="frame-corner-br" aria-hidden="true"></span>
+                        <picture>
+                            <source type="image/webp"
+                                srcset="images/optimized/gallery_3-800.webp 800w, images/optimized/gallery_3-1600.webp 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw">
+                            <img src="images/optimized/gallery_3-800.jpg"
+                                srcset="images/optimized/gallery_3-800.jpg 800w, images/optimized/gallery_3-1600.jpg 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw"
+                                alt="Detail práce" width="1200" height="1600"
+                                loading="lazy" decoding="async">
+                        </picture>
+                        <span class="gallery-caption">Detail práce</span>
+                    </button>
+                    <button type="button" class="gallery-item fade-in-up" data-full="images/optimized/gallery_7-1600.webp" data-fallback="images/optimized/gallery_7-1600.jpg" data-caption="Zemní práce">
+                        <span class="frame-corner-bl" aria-hidden="true"></span>
+                        <span class="frame-corner-br" aria-hidden="true"></span>
+                        <picture>
+                            <source type="image/webp"
+                                srcset="images/optimized/gallery_7-800.webp 800w, images/optimized/gallery_7-1600.webp 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw">
+                            <img src="images/optimized/gallery_7-800.jpg"
+                                srcset="images/optimized/gallery_7-800.jpg 800w, images/optimized/gallery_7-1600.jpg 1600w"
+                                sizes="(min-width: 1100px) 33vw, (min-width: 700px) 50vw, 100vw"
+                                alt="Zemní práce" width="1600" height="2948"
+                                loading="lazy" decoding="async">
+                        </picture>
+                        <span class="gallery-caption">Zemní práce</span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title fade-in-up">Kontakt</h2>
-                <div class="contact-methods">
-                    <div class="contact-item glass-card fade-in-up delay-100">
-                        <h3>Telefon</h3>
-                        <a href="tel:720773117" class="contact-link">720 773 117</a>
+                <div class="section-head fade-in-up">
+                    <span class="section-num" aria-hidden="true">§ 04 / 04</span>
+                    <h2 class="section-title">Kontakt</h2>
+                </div>
+                <div class="contact-grid">
+                    <a href="tel:720773117" class="contact-card fade-in-up">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </span>
+                        <div class="contact-body">
+                            <h3>Telefon</h3>
+                            <span class="contact-link">720 773 117</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/420720773117" target="_blank" rel="noopener" class="contact-card fade-in-up delay-100">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                            </svg>
+                        </span>
+                        <div class="contact-body">
+                            <h3>WhatsApp</h3>
+                            <span class="contact-link">Napsat na WhatsApp</span>
+                        </div>
+                    </a>
+                    <div class="contact-card fade-in-up delay-200">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </span>
+                        <div class="contact-body">
+                            <h3>Lokalita</h3>
+                            <p>Klimkovice, Studénka, Fulnek, Ostrava, Bílovec</p>
+                        </div>
                     </div>
-                    <div class="contact-item glass-card fade-in-up delay-200">
-                        <h3>WhatsApp</h3>
-                        <a href="https://wa.me/420720773117" target="_blank" class="contact-link">Napsat na WhatsApp</a>
-                    </div>
-                    <div class="contact-item glass-card fade-in-up delay-300">
-                        <h3>Lokalita</h3>
-                        <p>Klimkovice, Studénka, Fulnek, Ostrava, Bílovec</p>
-                    </div>
-                    <div class="contact-item glass-card fade-in-up delay-400">
-                        <h3>Sledujte nás</h3>
-                        <div class="social-links">
-                            <a href="https://www.instagram.com/minibagryadri/" target="_blank"
-                                class="social-link instagram" aria-label="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=61563068255991" target="_blank"
-                                class="social-link facebook" aria-label="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
+                    <div class="contact-card fade-in-up delay-300">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+                            </svg>
+                        </span>
+                        <div class="contact-body">
+                            <h3>Sledujte nás</h3>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/minibagryadri/" target="_blank" rel="noopener"
+                                    class="social-link instagram" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                        <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.42 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.42 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.42-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.43-.36-1.06-.42-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.42 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.34 4.14.63c-.79.3-1.46.72-2.13 1.39C1.34 2.69.92 3.36.62 4.14.34 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.27 2.15.56 2.91.3.79.72 1.46 1.39 2.13.67.67 1.34 1.09 2.13 1.39.76.29 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.27 2.91-.56.79-.3 1.46-.72 2.13-1.39.67-.67 1.09-1.34 1.39-2.13.29-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.27-2.15-.56-2.91-.3-.79-.72-1.46-1.39-2.13C21.32 1.34 20.65.92 19.86.62 19.1.34 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84c-3.4 0-6.16 2.76-6.16 6.16s2.76 6.16 6.16 6.16 6.16-2.76 6.16-6.16S15.4 5.84 12 5.84zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm6.41-11.85c-.8 0-1.44.65-1.44 1.44 0 .8.65 1.44 1.44 1.44.8 0 1.44-.65 1.44-1.44.01-.79-.64-1.44-1.44-1.44z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.facebook.com/profile.php?id=61563068255991" target="_blank" rel="noopener"
+                                    class="social-link facebook" aria-label="Facebook">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -366,17 +478,52 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 MINIBAGRY<span class="text-primary">ADRI</span>. Všechna práva vyhrazena.</p>
-            <p class="footer-ico">IČO: 09270884</p>
-            <p class="footer-legal">
-                <a href="gdpr.html">Ochrana osobních údajů</a> |
-                <a href="obchodni-podminky.html">Obchodní podmínky</a>
-            </p>
+        <div class="container footer-content">
+            <a href="#hero" class="footer-brand logo">MINIBAGRY<span class="text-primary">ADRI</span></a>
+            <div class="footer-meta">
+                <p>&copy; 2025 MINIBAGRY<span class="text-primary">ADRI</span>. Všechna práva vyhrazena.</p>
+                <p class="footer-ico">IČO: 09270884</p>
+                <p class="footer-legal">
+                    <a href="gdpr.html">Ochrana osobních údajů</a>
+                    <span class="footer-sep" aria-hidden="true">·</span>
+                    <a href="obchodni-podminky.html">Obchodní podmínky</a>
+                </p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Lightbox -->
+    <dialog class="lightbox" id="lightbox" aria-label="Galerie">
+        <div class="lightbox-stage">
+            <button type="button" class="lightbox-btn lightbox-close" aria-label="Zavřít">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" aria-hidden="true">
+                    <path d="M6 6 L18 18 M18 6 L6 18"/>
+                </svg>
+            </button>
+            <button type="button" class="lightbox-btn lightbox-prev" aria-label="Předchozí">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 6 L9 12 L15 18"/>
+                </svg>
+            </button>
+            <button type="button" class="lightbox-btn lightbox-next" aria-label="Další">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 6 L15 12 L9 18"/>
+                </svg>
+            </button>
+            <div class="lightbox-content">
+                <img class="lightbox-img" alt="" decoding="async">
+            </div>
+            <div class="lightbox-meta">
+                <span class="lightbox-caption"></span>
+                <span class="lightbox-counter"></span>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js?v=6" defer></script>
 </body>
 
 </html>
