@@ -19,6 +19,7 @@ JOBS = {
     "gallery_3.jpg":      {"sizes": [1600, 800], "quality_webp": 78, "quality_jpg": 78},
     "gallery_4.jpg":      {"sizes": [1600, 800], "quality_webp": 78, "quality_jpg": 78},
     "gallery_5.jpg":      {"sizes": [1600, 800], "quality_webp": 78, "quality_jpg": 78},
+    "gallery_6.jpg":      {"sizes": [1600, 800], "quality_webp": 78, "quality_jpg": 78},
     "adri_portrait.jpg":  {"sizes": [1200, 800, 480], "quality_webp": 82, "quality_jpg": 82},
 }
 
